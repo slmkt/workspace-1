@@ -23,7 +23,7 @@ insert into products (id, name, price) values ('I-004', 'プリンタ', 9800);
 -- exercise-S2. すべてのレコードの製品ID（idフィールド）と製品名（nameフィールド）を抽出する
 select id,name from products;
 -- exercise-S3. 価格が40000円を超える製品のすべてのフィールドを抽出する
- select id,name,price from products where price>=40000;
+ select id,name,price from products where price>40000;
 -- exercise-S4. 価格が3の倍数になっている製品の製品名（nameフィールド）と価格（priceフィールド）を抽出する
 select name,(price*3) from products;
 -- exercise-S5. 製品名が「デ」で始まるレコードの製品名（nameフィールド）を抽出する
