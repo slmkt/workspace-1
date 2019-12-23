@@ -18,4 +18,25 @@ try {
 } catch (PDOException $e) {
 	echo $e->getMessage();
 }
+if(!is_null($pd0)){
+    echo "データベスに接続に成功しました。";
+}else{
+    echo "データベスに接続に失敗しました。";
+}
+
+$sql = "select * from restaurants";
+$pstmt = $pdo->prepare($sql);
+$pstmt->execute();
+$rs= $pstmt ->fetchAll();
+
+foreach ($rs as $record){
+    $restaurant = [];
+    $restaurant["id"]=record["id"];
+    $restaurant["name"]=record["name"];
+    $restaurant["detail"]=record["detail"];
+    $restaurant["image"]=record["image"];
+    $restaurant["area"]=record["area"];
+    $restaurant[]=$restaurant;
+    
+}
 ?>

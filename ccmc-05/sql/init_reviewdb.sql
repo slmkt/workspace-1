@@ -1,13 +1,13 @@
 /**
  * データベースの初期化
  *  データベース名：reviewdb
- *  接続ユーザ：reviewdb_admin@localhost
+ *  接続ユーザ：reviewdb_admin
  *  接続パスワード：admin123
  */ 
 drop database if exists reviewdb;
-drop user if exists reviewdb_admin@localhost;
+drop user if exists reviewdb_admin;
 create database reviewdb character set utf8;
-grant all privileges on reviewdb.* to 'reviewdb_admin'@'localhost' identified by 'admin123'; 
+grant all privileges on reviewdb.* to 'reviewdb_admin' identified by 'admin123'; 
 
 use reviewdb;
 
